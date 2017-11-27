@@ -1,0 +1,17 @@
+# Navigation
+alias ..="cd .."
+
+# Ruby
+alias be="bundle exec"
+
+# Git
+alias gst="git status"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gpom="git pull origin master"
+alias gco="git checkout"
+alias gl="git log"
+
+#Editing Config
+alias vba="vim ~/.bash_aliases && source ~/.bash_aliases"
+alias vbp="vim ~/.bash_profile && source ~/.bash_profile"
