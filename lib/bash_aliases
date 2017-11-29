@@ -2,9 +2,14 @@
 alias ..="cd .."
 
 # Ruby
+alias b="bundle"
 alias be="bundle exec"
 
+# Javascript, etc
+alias ys="yarn start "
+
 # Git
+alias gb="git branch"
 alias gst="git status"
 alias gd="git diff"
 alias gdc="git diff --cached"
