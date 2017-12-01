@@ -10,3 +10,5 @@ ln -nfs ~/dotfiles/vendor/git-completion.bash ~/.git-completion.bash
 ln -nfs ~/dotfiles/lib/gitignore ~/.gitignore
 # Add global .gitignore as global core.excludesfile
 git config --global core.excludesfile ~/.gitignore
+# Link .gitconfig
+ln -nfs ~/dotfiles/lib/gitconfig ~/.gitconfig

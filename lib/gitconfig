@@ -1,0 +1,8 @@
+[user]
+  name = farisj
+  email = jakefaris@outlook.com
+[alias]
+  st = status
+  last = diff HEAD^
+[core]
+  excludesfile = ~/.gitignore
