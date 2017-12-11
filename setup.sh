@@ -12,3 +12,5 @@ ln -nfs ~/dotfiles/lib/gitignore ~/.gitignore
 git config --global core.excludesfile ~/.gitignore
 # Link .gitconfig
 ln -nfs ~/dotfiles/lib/gitconfig ~/.gitconfig
+# Link .vimrc
+ln -nfs ~/dotfiles/lib/vimrc ~/.vimrc

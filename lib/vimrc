@@ -1,0 +1,7 @@
+" Jake's vimrc
+
+syntax enable          " Turn on syntax highlighting.
+
+set tabstop=2          " Global tab width.
+set expandtab          " Use spaces instead of tabs.
+

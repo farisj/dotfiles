@@ -20,3 +20,4 @@ alias gl="git log"
 #Editing Config
 alias vba="vim ~/.bash_aliases && source ~/.bash_aliases"
 alias vbp="vim ~/.bash_profile && source ~/.bash_profile"
+alias vvr="vim ~/.vimrc"
