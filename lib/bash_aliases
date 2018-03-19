@@ -4,6 +4,8 @@ alias ..="cd .."
 # Ruby
 alias b="bundle"
 alias be="bundle exec"
+alias berc="bundle exec rails console"
+alias bers="bundle exec rails server"
 
 # Javascript, etc
 alias ys="yarn start "
@@ -15,9 +17,11 @@ alias gd="git diff"
 alias gdc="git diff --cached"
 alias gpom="git pull origin master"
 alias gco="git checkout"
+alias gcop="git checkout -p"
 alias gl="git log"
 
 #Editing Config
 alias vba="vim ~/.bash_aliases && source ~/.bash_aliases"
 alias vbp="vim ~/.bash_profile && source ~/.bash_profile"
+alias vbc="vim ~/.bashrc && source ~/.bashrc"
 alias vvr="vim ~/.vimrc"
