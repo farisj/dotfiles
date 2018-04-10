@@ -1,7 +1,55 @@
 " Jake's vimrc
 
-syntax enable          " Turn on syntax highlighting.
+" Vundle copy & paste
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'arcticicestudio/nord-vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+syntax enable          " Turn on syntax highlighting.
+colorscheme nord
 set tabstop=2          " Global tab width.
 set expandtab          " Use spaces instead of tabs.
+set number
+set cursorline
+set nowrap
+set listchars=tab:▸\ ,eol:¬,space:·
+set ignorecase
+set smartcase
+set shiftwidth=2
+set showcmd
 
+" CtrlP settings
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp'
+
+" GitGutter settings
+let g:gitgutter_sign_column_always = 1 " This doesn't work... hm

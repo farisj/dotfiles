@@ -14,3 +14,6 @@ git config --global core.excludesfile ~/.gitignore
 ln -nfs ~/dotfiles/lib/gitconfig ~/.gitconfig
 # Link .vimrc
 ln -nfs ~/dotfiles/lib/vimrc ~/.vimrc
+
+# Setup Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
