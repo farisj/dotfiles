@@ -1,5 +1,6 @@
 # Navigation
 alias ..="cd .."
+alias t="tmuxinator"
 
 # Ruby
 alias b="bundle"
