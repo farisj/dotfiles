@@ -5,6 +5,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+let mapleader = ","
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -17,6 +19,11 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
+Plugin 'w0rp/ale'
+Plugin 'fatih/vim-go'
+Plugin 'vim-scripts/tComment'
+
+" Style
 Plugin 'arcticicestudio/nord-vim'
 
 " All of your Plugins must be added before the following line
@@ -37,19 +44,61 @@ filetype plugin indent on    " required
 
 syntax enable          " Turn on syntax highlighting.
 colorscheme nord
+set backspace=2        " Normal backspaces.
 set tabstop=2          " Global tab width.
 set expandtab          " Use spaces instead of tabs.
 set number
-set cursorline
+"set cursorline         " Love this, but dramatically slows vim down... :cry:
 set nowrap
-set listchars=tab:▸\ ,eol:¬,space:·
+set listchars=trail:·,eol:¬ "tab:▸\ ,eol:¬,space:·,trail:·
 set ignorecase
 set smartcase
 set shiftwidth=2
 set showcmd
 
-" CtrlP settings
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp'
+" Navigation Settings
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-W>
 
+" Editing VIM
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>D yyp
+"nnoremap <leader>| :NERDTreeFind<CR>
+" Custom controls
+
+" Move a line one line down
+map - ddp
+map _ ddkP
+" Delete a line faster
+nnoremap \ dd
+inoremap <c-d> <esc>ddi
+" Uppercase the current word
+inoremap <c-u> <esc>viwUea
+nnoremap <c-u> viwU
+" CtrlP settings
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|tmp\|public|packages'
+  "asdf
 " GitGutter settings
-let g:gitgutter_sign_column_always = 1 " This doesn't work... hm
+set signcolumn=yes
+
+" Ale settings
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_set_highlights = 0
+
+" Airline Settings
+"let g:airline#extensions#tmuxline#enabled = 0
+set statusline=%<%f\                     " Filename
+set statusline+=%w%h%m%r                 " Options
+set statusline+=\[%{&ff}/%Y]             " Filetype
+set statusline+=\ [%{getcwd()}]
+
+" Vim Config
+"let g:go_highlight_build_constraints = 1
+"let g:go_highlight_types = 1
+"let g:go_highlight_functions = 1
+"let g:go_highlight_methods = 1
+"let g:go_fmt_command = "goimports"
+" let g:go_auto_sameids = 1

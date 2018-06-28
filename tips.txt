@@ -1,0 +1,15 @@
+" Tmux
+
+" Vim
+g~               " Swap case
+gu               " Make lowercase
+gU               " Make uppercase
+:vsp|b#          " Open last buffer in vertical split
+""" Insert Mode
+
+<C-h>            " Backspace
+<C-w>            " Delete back one word
+<C-u>            " Delete back to start of line
+<C-r>=           " Expression Register
+""" Visual Mode
+o                " Swap fixed/free end of selection
