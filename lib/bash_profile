@@ -17,6 +17,10 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
 }
 
+function parse_git_branch_short {
+  parse_git_branch | sed -e "s~jake/cne~*~"
+}
+
 CYAN="\[\033[0;36m\]"
 PURPLE="\[\033[0;35m\]"
 RED="\[\033[0;31m\]"
@@ -26,3 +30,32 @@ GREEN="\[\033[0;32m\]"
 NO_COLOUR="\[\033[0m\]"
 
 PS1="$RED\$(date +%H:%M) \w$YELLOW\$(parse_git_branch)\$ $NO_COLOUR"
+
+function gopwd() {
+  if [[ `pwd` = *$GOPATH* ]]; then
+    echo `pwd | sed -e "s~$GOPATH\/\(\w*\)~\1~"`
+  else
+    echo `pwd | sed -e 's/.*\/\(\w*\)/\1/'`
+  fi
+}
+
+function ps1() {
+  if [ $1 = "short" ]; then
+    export PS1_LENGTH=short
+    export PS1="$RED\$(date +%H:%M) $(gopwd)$YELLOW\$(parse_git_branch_short)\$ $NO_COLOUR"
+  elif [ $1 = "long" ]; then
+    export PS1_LENGTH=long
+    export PS1="$RED\$(date +%H:%M) \w$YELLOW\$(parse_git_branch)\$ $NO_COLOUR"
+  else
+    echo "'$1' not a valid \$PS1 config."
+    echo
+    echo "     options: 'short', 'long'"
+  fi
+}
+
+export PS1_LENGTH=long
+export PROMPT_COMMAND=set_ps1
+
+function set_ps1 {
+  ps1 $PS1_LENGTH
+}
