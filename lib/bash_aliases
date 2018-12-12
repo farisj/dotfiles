@@ -30,6 +30,7 @@ alias vbc="vim ~/.bashrc && source ~/.bashrc"
 alias vvr="vim ~/.vimrc"
 alias vtc="vim ~/.tmux.conf"
 alias vgi="vim ~/.gitignore"
+alias vac="vim ~/.aws/credentials"
 alias vtips="vim ~/dotfiles/tips.txt"
 # Misc Bash
 alias ro="rubocop --only"

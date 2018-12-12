@@ -57,6 +57,7 @@ set smartcase
 set shiftwidth=2
 set showcmd
 set clipboard=unnamed  " Use system clipboard
+set term=screen-256color
 
 " Navigation Settings
 nnoremap <C-J> <C-W><C-J>
@@ -93,11 +94,12 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_set_highlights = 0
 
 " Airline Settings
-"let g:airline#extensions#tmuxline#enabled = 0
-set statusline=%<%f\                     " Filename
-set statusline+=%w%h%m%r                 " Options
-set statusline+=\[%{&ff}/%Y]             " Filetype
-set statusline+=\ [%{getcwd()}]
+" let g:airline#extensions#tmuxline#enabled = 0
+let g:airline_section_z = '%#__accent_bold#%{g:airline_symbols.linenr}%4l%#__restore__#:%3v'
+" set statusline=%<%f\                     " Filename
+" set statusline+=%w%h%m%r                 " Options
+" set statusline+=\[%{&ff}/%Y]             " Filetype
+" set statusline+=\ [%{getcwd()}]
 
 " Vim Config
 let g:go_highlight_build_constraints = 1
