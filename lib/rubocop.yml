@@ -1,0 +1,123 @@
+Style:
+  Enabled: true
+
+Style/AsciiComments:
+  Enabled: false
+Style/BracesAroundHashParameters:
+  Enabled: false
+Style/BlockDelimiters:
+  Exclude:
+    - "spec/**/*"
+Style/CommentAnnotation:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Style/DateTime:
+  Enabled: false
+Style/WordArray:
+  Enabled: false
+Style/NegatedIf:
+  Enabled: false
+Style/TrailingCommaInArguments:
+  Enabled: false
+Style/MethodMissingSuper:
+  Enabled: false
+Style/MissingRespondToMissing:
+  Enabled: false
+Style/PercentLiteralDelimiters:
+  Enabled: false
+Style/Next:
+  Enabled: false
+Style/MultilineBlockChain:
+  Enabled: false
+Style/MultilineIfModifier:
+  Enabled: false
+Style/SingleLineMethods:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+Style/IfUnlessModifier:
+  Enabled: false
+Style/NumericPredicate:
+  Enabled: false
+Style/ConditionalAssignment:
+  Enabled: false
+Style/Lambda:
+  Enabled: false
+Style/UnlessElse:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Style/RescueModifier:
+  Enabled: false
+Style/RedundantBegin:
+  Enabled: false
+Style/FormatString:
+  Enabled: false
+Style/FormatStringToken:
+  Enabled: false
+Style/ClassVars:
+  Enabled: false
+Style/IfInsideElse:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/HashSyntax:
+  Enabled: false
+Style/ExpandPathArguments:
+  Enabled: false
+Lint:
+  Enabled: true
+
+Lint/UselessAssignment:
+  Enabled: true
+Lint/HandleExceptions:
+  Enabled: false
+Lint/UnderscorePrefixedVariableName:
+  Enabled: false
+Lint/UriEscapeUnescape:
+  Enabled: false
+
+Metrics:
+  Enabled: false
+
+Layout/IndentHash:
+  Enabled: false
+Layout/ClosingParenthesisIndentation:
+  Enabled: false
+Layout/AlignHash:
+  Enabled: false
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: false
+Layout/SpaceInsideParens:
+  Enabled: false
+Layout/SpaceInsideStringInterpolation:
+  Enabled: false
+Layout/IndentArray:
+  Enabled: false
+Layout/AlignParameters:
+  Enabled: false
+Layout/FirstParameterIndentation:
+  Enabled: false
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+Naming:
+  Enabled: false
+
+Performance:
+  Enabled: true
+
+Bundler:
+  Enabled: true
+
+Gemspec:
+  Enabled: false
