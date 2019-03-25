@@ -23,6 +23,8 @@ alias gl="git log"
 alias git_branch="git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'"
 alias gpu="git push --set-upstream origin `git_branch`"
 alias gg="git grep"
+alias ggi="git grep -i"
+
 #Editing Config
 alias vba="vim ~/.bash_aliases && source ~/.bash_aliases"
 alias vbp="vim ~/.bash_profile && source ~/.bash_profile"
@@ -30,8 +32,13 @@ alias vbc="vim ~/.bashrc && source ~/.bashrc"
 alias vvr="vim ~/.vimrc"
 alias vtc="vim ~/.tmux.conf"
 alias vgi="vim ~/.gitignore"
+alias vgc="vim ~/.gitconfig"
 alias vac="vim ~/.aws/credentials"
 alias vtips="vim ~/dotfiles/tips.txt"
+
+# Devops
+alias tf="terraform"
+
 # Misc Bash
 alias ro="rubocop --only"
 alias rubocop_checkin="bundle exec rubocop | egrep 'C:|W:' | sed -e 's/.*[CW]: \([a-zA-Z\/]*\).*/\1/g' | sort | uniq"

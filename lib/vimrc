@@ -23,6 +23,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'w0rp/ale'
 Plugin 'fatih/vim-go'
 Plugin 'vim-scripts/tComment'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'hashivim/vim-terraform'
 
 " Style
 Plugin 'arcticicestudio/nord-vim'

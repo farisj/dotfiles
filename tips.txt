@@ -27,6 +27,9 @@ o                " Swap fixed/free end of selection
 ‘< Start of last visual selection
 ‘> End of last visual selection
 
+" Macros
+https://thoughtbot.com/blog/how-to-edit-an-existing-vim-macro
+
 " Golang
 
 " Taking an io.ReadCloser (from HTTPRequest) and printing as string
