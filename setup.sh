@@ -18,3 +18,9 @@ ln -nfs ~/dotfiles/lib/vimrc ~/.vimrc
 ln -nfs ~/dotfiles/lib/.tmux.conf ~/.tmux.conf
 # Setup Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+echo "You are all set up!"
+echo "Consider downloading the following products:"
+
+echo ""
+echo "SizeUp: http://www.irradiatedsoftware.com/sizeup/"
