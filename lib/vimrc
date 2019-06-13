@@ -113,6 +113,9 @@ let g:go_highlight_methods = 1
 let g:go_fmt_command = "goimports"
 let g:go_auto_sameids = 1
 
+" TF
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
 " Go Tests - Need to set this up for only *.go files
 nnoremap <leader>t :GoTest<CR>
 nnoremap <leader>v :GoVet<CR>
