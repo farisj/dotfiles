@@ -41,3 +41,5 @@ fmt.Println(buf.String())
 `go test -coverprofile cover.out` and then
 `go tool cover -html=cover.out -o cover.html`
 `open cover.html` in browser
+
+docker-compose run --rm web rails console

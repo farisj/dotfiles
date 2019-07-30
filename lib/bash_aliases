@@ -8,6 +8,11 @@ alias be="bundle exec"
 alias berc="bundle exec rails console"
 alias bers="bundle exec rails server"
 
+# Ruby & Docker
+alias dcc="docker-compose run --rm web rails console"
+alias dcu="docker-compose up"
+alias dcd="docker-compose down"
+alias dcrspec="docker-compose exec test bin/rspec"
 # Javascript, etc
 alias ys="yarn start "
 
@@ -24,6 +29,7 @@ alias git_branch="git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/*
 alias gpu="git push --set-upstream origin `git_branch`"
 alias gg="git grep"
 alias ggi="git grep -i"
+alias gbm="git branch --merged"
 
 #Editing Config
 alias vba="vim ~/.bash_aliases && source ~/.bash_aliases"

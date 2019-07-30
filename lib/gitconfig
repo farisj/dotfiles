@@ -3,6 +3,7 @@
   email = jakefaris@outlook.com
 [alias]
   st = status
+  co = checkout
   last = diff HEAD^
 [core]
   excludesfile = ~/.gitignore
