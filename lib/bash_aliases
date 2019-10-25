@@ -9,10 +9,11 @@ alias berc="bundle exec rails console"
 alias bers="bundle exec rails server"
 
 # Ruby & Docker
-alias dcc="docker-compose run --rm web rails console"
+alias dcc="docker-compose run --rm puma bundle exec rails console"
+alias dcr="docker-compose run --rm puma"
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
-alias dcrspec="docker-compose exec test bin/rspec"
+alias dcrspec="docker-compose run --rm puma bin/rspec"
 # Javascript, etc
 alias ys="yarn start "
 

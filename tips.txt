@@ -27,6 +27,9 @@ o                " Swap fixed/free end of selection
 ‘< Start of last visual selection
 ‘> End of last visual selection
 
+" Git
+gg pattern -- `git ls-files | grep -v spec`
+
 " Macros
 https://thoughtbot.com/blog/how-to-edit-an-existing-vim-macro
 

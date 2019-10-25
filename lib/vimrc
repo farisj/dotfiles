@@ -24,9 +24,11 @@ Plugin 'w0rp/ale'
 Plugin 'fatih/vim-go'
 Plugin 'vim-scripts/tComment'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'digitaltoad/vim-pug'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'hashivim/vim-terraform'
+Plugin 'isRuslan/vim-es6'
 
 " Style
 Plugin 'arcticicestudio/nord-vim'
@@ -72,11 +74,15 @@ nnoremap <C-H> <C-W><C-W>
 " Editing VIM
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-nnoremap <leader>D yyp
+nnoremap <silent> <leader>D yyp
 nnoremap <leader>\ :NERDTreeToggle<CR>
+" nnoremap <leader>| :NERDTreeFind
+" autocmd VimEnter * nnoremap <leader>| :NERDTreeFind<CR>
 nnoremap <leader>zt 4kzt4j
 nnoremap <leader>zb 4jzb4k
-"nnoremap <leader>| :NERDTreeFind<CR>
+nnoremap <leader>bp :bp\|bd # <CR>
+com! FormatJSON %!python -m json.tool
+" nnoremap <leader>| :NERDTreeFind<CR>
 " Custom controls
 
 " Move a line one line down
