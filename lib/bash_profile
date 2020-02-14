@@ -59,3 +59,23 @@ export PROMPT_COMMAND=set_ps1
 function set_ps1 {
   ps1 $PS1_LENGTH
 }
+
+function title {
+  echo -ne "\033]0;"$*"\007"
+}
+
+# Needs .aws/config such as:
+# [default]
+# region = us-west-1
+# output = json
+# cli_follow_urlparam = false
+# Replace {{}} mfa with appropriate ids
+function amfa() {
+  profile='default'
+  mfa=$(oathtool --totp -b $(< ~/.token))
+  eval `aws sts get-session-token --serial-number {{MFA ARN (ACCOUNT ID)}/{IAM USER} --token-code $mfa --profile $profile | jq -r ". | {AWS_SECRET_ACCESS_KEY: .Credentials.SecretAccessKey, AWS_ACCESS_KEY_ID: .Credentials.AccessKeyId, AWS_SESSION_TOKEN: .Credentials.SessionToken} | to_entries|map(\"export \(.key)=\(.value|tostring)\")|.[]"`
+  unset 'export'
+  export AWS_DEFAULT_REGION='us-west-1'
+  export AWS_REGION='us-west-1'
+}
+# export PATH="$PATH:/usr/local/opt/mysql@5.7/bin" # Flipped

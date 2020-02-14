@@ -52,3 +52,45 @@ alias rubocop_checkin="bundle exec rubocop | egrep 'C:|W:' | sed -e 's/.*[CW]: \
 alias rubocop_count="bundle exec rubocop | egrep 'C:|W:' | sed -e 's/.*[CW]: \([a-zA-Z\/]*\).*/\1/g' | sort | uniq -c"
 alias rubocop_list_files="rubocop | egrep 'C:|W:' | sed 's/^\([^:]*\).*/\1/g' | sort | uniq"
 alias rubocop_checkin_info="bundle exec rubocop | egrep 'C:|W:' | sed -e 's/.*[CW]: \([a-zA-Z\/]*.*\)/\1/g' | sort | uniq"
+
+# alias mattach="docker attach `docker-compose ps -q puma`"
+# alias mbash="docker-compose run --rm puma bash"
+
+function mattach {
+  CONTAINER_NAME=${1:-puma}
+  echo $CONTAINER_NAME
+  CONTAINER_ID=$(docker-compose ps -q ${CONTAINER_NAME})
+  docker attach $CONTAINER_ID
+}
+
+function mbash {
+  CONTAINER_NAME=${1:-puma}
+  echo $CONTAINER_NAME
+  docker-compose run --rm ${CONTAINER_NAME} bash
+}
+
+function ggvim {
+  LIST=$(git grep --name-only \1)
+  echo $LIST
+  vim $LIST
+}
+
+function appgrep {
+  apps=(
+    # Put directories here
+  )
+  for app in "${apps[@]}"
+  do
+    cd $app
+    printf "\n\n\n\n"
+    printf `pwd`
+    printf "\n\n\n\n"
+    gg -q $1
+    if [ $? -eq 0 ]
+    then
+      gg $1
+      # read -p "Press Enter To Continue"
+    fi
+    cd ~/src
+  done
+}
